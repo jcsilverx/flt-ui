@@ -1,0 +1,13 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Get Help
+    url: https://github.com/flt-ui/primitives/discussions/new?category=q-a
+    about: "If you're unable to get something to work as expected, post a question in our discussion forums."
+
+  - name: Feature Request
+    url: https://github.com/flt-ui/primitives/discussions/new?category=ideas
+    about: "Suggest new features or improvements."
+
+  - name: Bug Report
+    url: https://github.com/flt-ui/primitives/issues/new?body=**What%20package%20within%20%60flt-ui%2Fheadless%60%20are%20you%20using%3F**%0A%0AFor%20example%3A%20%60%40flt-ui%2Freact-use-accordion%60%0A%0A**What%20version%20of%20that%20package%20are%20you%20using%3F**%0A%0AFor%20example%3A%20v0.1.X%0A%0A**Describe%20the%20issue**%0A%0APlease%20provide%20a%20clear%20description%20of%20the%20issue%20you%27re%20facing%2C%20including%20any%20steps%20to%20reproduce%20and%20what%20behaviour%20you%20expected.%0A%0A**Additional%20information**%0A%0AAny%20other%20relevant%20details%2C%20including%20screenshots%2C%20logs%2C%20or%20configurations%20that%20could%20help%20in%20understanding%20the%20issue.
+    about: "If you've already asked for help with a problem and confirmed something is broken, create a bug report."

@@ -1,0 +1,105 @@
+/**
+ * Copyright 2025 flt/ui. All rights reserved.
+ *
+ * This file is Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+import { useControlledState } from "@flt-ui/react-use-controlled-state";
+
+type ToggleGroupSingleProps = {
+  /**
+   * The controlled value of the item to press.
+   *
+   * @note Must be used in conjunction with `onValueChange`.
+   *
+   * @default —
+   */
+  value?: string | null;
+  /**
+   * The value of the item to press when initially rendered.
+   *
+   * @note Use when you do **not** need to control the state
+   *       of the items.
+   *
+   * @default —
+   */
+  defaultValue?: string | null;
+  /**
+   * Function that is invoked when the pressed state of an
+   * item changes.
+   *
+   * @default —
+   */
+  onValueChange?: (value: string | null) => void;
+  /**
+   * The name of the caller that triggers warnings during state
+   * transitions.
+   *
+   * @note This prop is primarily used for debugging purposes to
+   *       identify which component is undergoing transitions between
+   *       controlled and uncontrolled states.
+   *
+   * @default —
+   */
+  caller?: string;
+};
+
+type ToggleGroupSingleReturn = {
+  /**
+   * The currently pressed item in the toggle group.
+   */
+  readonly value: string | null;
+  /**
+   * Function to activate a specific item in the toggle group.
+   */
+  onItemActivate: (value: string) => void;
+  /**
+   * Function to deactivate the currently activated item in the toggle group.
+   */
+  onItemDeactivate: () => void;
+};
+
+function useToggleGroupSingle(
+  props: ToggleGroupSingleProps,
+): ToggleGroupSingleReturn {
+  let {
+    value: _value,
+    defaultValue: _defaultValue,
+    onValueChange: _onValueChange,
+    caller,
+  } = props;
+
+  let [value, setValue] = useControlledState<string | null>({
+    prop: _value,
+    defaultProp: _defaultValue ?? null,
+    onChange: _onValueChange,
+    caller,
+  });
+
+  const onItemActivate = (value: string): void => {
+    setValue(value);
+  };
+
+  const onItemDeactivate = (): void => {
+    setValue(null);
+  };
+
+  return {
+    value,
+    onItemActivate,
+    onItemDeactivate,
+  };
+}
+
+export { useToggleGroupSingle };
+export type { ToggleGroupSingleProps, ToggleGroupSingleReturn };

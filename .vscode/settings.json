@@ -1,0 +1,11 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.wordWrap": "off",
+  "editor.tabSize": 2,
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ]
+}

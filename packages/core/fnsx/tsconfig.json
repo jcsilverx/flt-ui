@@ -1,0 +1,12 @@
+{
+  "extends": "@zphyrx/typescript-config/no-dom/monorepo",
+  "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "outDir": "dist/esm",
+    "allowJs": false,
+    "types": ["vitest/globals"]
+  },
+  "include": ["src", "**/*.ts", "**/*.mts"],
+  "exclude": ["node_modules", "dist"]
+}

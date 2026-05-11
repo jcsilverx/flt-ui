@@ -1,0 +1,83 @@
+{
+  "name": "@flt-ui/react-switch",
+  "version": "0.0.0",
+  "private": false,
+  "homepage": "https://flt-ui.com",
+  "bugs": {
+    "url": "https://github.com/flt-ui/primitives/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flt-ui/primitives.git"
+  },
+  "license": "Apache-2.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      }
+    }
+  },
+  "module": "./dist/esm/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "check-types": "tsc",
+    "lint": "eslint . --max-warnings 0",
+    "clean": "rm -rf node_modules dist",
+    "test": "vitest",
+    "test:watch": "vitest --watch"
+  },
+  "dependencies": {
+    "@flt-ui/react-primitive": "workspace:*",
+    "@flt-ui/react-context-scope": "workspace:*",
+    "@flt-ui/react-compose-event": "workspace:*",
+    "@flt-ui/react-use-event": "workspace:*",
+    "@flt-ui/react-use-switch": "workspace:*",
+    "@flt-ui/react-use-composed-refs": "workspace:*",
+    "@flt-ui/react-use-previous": "workspace:*",
+    "@flt-ui/react-use-size": "workspace:*",
+    "@flt-ui/react-label": "workspace:*",
+    "@flt-ui/react-use-id": "workspace:*",
+    "@flt-ui/a11y": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^24.2.1",
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
+    "@typescript-eslint/utils": "^8.39.1",
+    "@zphyrx/eslint-config": "^2.0.1",
+    "@zphyrx/tsup-config": "^2.0.1",
+    "@zphyrx/typescript-config": "^2.0.1",
+    "@zphyrx/vitest-config": "^2.0.1",
+    "eslint": "^9.33.0",
+    "jiti": "^2.5.1",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "tsup": "^8.5.0",
+    "vitest": "^3.2.4"
+  },
+  "peerDependencies": {
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
+    "react": "^19.0 || ^19.0.0-rc",
+    "react-dom": "^19.0 || ^19.0.0-rc"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    },
+    "@types/react-dom": {
+      "optional": true
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
