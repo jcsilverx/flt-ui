@@ -43,7 +43,7 @@
     "eslint": "^9.32.0",
     "jiti": "^2.5.1",
     "react": "^19.1.1",
-    "tsup": "^8.5.0"
+    "tsup": "^8.5.1"
   },
   "peerDependencies": {
     "@types/react": "^19.1.9",
