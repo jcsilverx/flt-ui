@@ -55,7 +55,7 @@
     "@zphyrx/eslint-config": "^2.0.1",
     "@zphyrx/postcss-config": "^2.0.1",
     "@zphyrx/typescript-config": "^2.0.1",
-    "eslint": "^9.33.0",
+    "eslint": "^9.39.5",
     "tailwindcss": "^4.1.11",
     "typescript": "^5.9.2"
   },

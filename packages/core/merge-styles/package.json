@@ -45,7 +45,7 @@
     "@zphyrx/tsup-config": "^2.0.1",
     "@zphyrx/typescript-config": "^2.0.1",
     "@zphyrx/vitest-config": "^2.0.1",
-    "eslint": "^9.39.1",
+    "eslint": "^9.39.5",
     "jiti": "^2.6.1",
     "tsup": "^8.5.1",
     "vitest": "^4.0.12"
